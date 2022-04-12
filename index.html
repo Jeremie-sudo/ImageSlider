@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+	<title>  Slidder </title>
+</head>
+<body>
+	
+
+	   <div class="container">
+	   	  <img src="blog-1.jpg" alt=""  id="img">
+	   	    
+	   </div>
+
+	   <script >
+	   	    const imag = document.getElementById('img')
+	   	    console.log(imag)
+	   	    const imgTable = ["1","2","3","4","5"]
+	   	    let imgIndex =1
+	      	const changeImage = ()=>{
+
+	   	    setTimeout(()=>{
+                  if(imgIndex <= imgTable.length){
+
+	   	     	  imag.src='blog-'+imgIndex+'.jpg'
+	   	     	  imgIndex++;
+	   	     	  changeImage()
+	   	     	}
+	   	     	else{
+	   	     		  imgIndex =1
+	   	     		 changeImage()
+
+
+	   	     	}
+
+
+	   	 },1000) 
+	   	     
+               }
+               changeImage()
+	   </script>
+</body>
+</html>
